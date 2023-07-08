@@ -17,6 +17,7 @@
 		52B87E9E2A5997E000425BD9 /* IosCourseGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87E9D2A5997E000425BD9 /* IosCourseGuideTests.swift */; };
 		52B87EA82A5997E000425BD9 /* IosCourseGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87EA72A5997E000425BD9 /* IosCourseGuideUITests.swift */; };
 		52B87EAA2A5997E000425BD9 /* IosCourseGuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87EA92A5997E000425BD9 /* IosCourseGuideUITestsLaunchTests.swift */; };
+		52B87ECB2A59EBAF00425BD9 /* background_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B87ECA2A59EBAE00425BD9 /* background_splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		52B87EA32A5997E000425BD9 /* IosCourseGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosCourseGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B87EA72A5997E000425BD9 /* IosCourseGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosCourseGuideUITests.swift; sourceTree = "<group>"; };
 		52B87EA92A5997E000425BD9 /* IosCourseGuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosCourseGuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52B87ECA2A59EBAE00425BD9 /* background_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_splash.png; path = ../../../background_splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				52B87E832A5997DD00425BD9 /* AppDelegate.swift */,
 				52B87E852A5997DD00425BD9 /* SceneDelegate.swift */,
 				52B87E8F2A5997DF00425BD9 /* Assets.xcassets */,
+				52B87ECA2A59EBAE00425BD9 /* background_splash.png */,
 				52B87E912A5997DF00425BD9 /* LaunchScreen.storyboard */,
 				52B87E942A5997DF00425BD9 /* Info.plist */,
 				52B87E8C2A5997DD00425BD9 /* IosCourseGuide.xcdatamodeld */,
@@ -284,6 +287,7 @@
 			files = (
 				52B87E932A5997DF00425BD9 /* LaunchScreen.storyboard in Resources */,
 				52B87E902A5997DF00425BD9 /* Assets.xcassets in Resources */,
+				52B87ECB2A59EBAF00425BD9 /* background_splash.png in Resources */,
 				52B87E8B2A5997DD00425BD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
