@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginPresenter{
+class SplashPresenter{
     var delegado : ILoginPresenter?
     
     func getToken() {

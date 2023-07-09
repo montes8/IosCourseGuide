@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		52AB9CB82A5B181100868248 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB72A5B181100868248 /* Util.swift */; };
-		52AB9CBA2A5B2CAD00868248 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB92A5B2CAD00868248 /* LoginPresenter.swift */; };
+		52AB9CBA2A5B2CAD00868248 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */; };
+		52AB9CBD2A5B478600868248 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CBC2A5B478600868248 /* RegisterViewController.swift */; };
+		52AB9CC32A5B4BB000868248 /* background_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AB9CC22A5B4BB000868248 /* background_splash.png */; };
 		52B87E842A5997DD00425BD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87E832A5997DD00425BD9 /* AppDelegate.swift */; };
 		52B87E862A5997DD00425BD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87E852A5997DD00425BD9 /* SceneDelegate.swift */; };
 		52B87E882A5997DD00425BD9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87E872A5997DD00425BD9 /* SplashViewController.swift */; };
@@ -19,7 +21,6 @@
 		52B87E9E2A5997E000425BD9 /* IosCourseGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87E9D2A5997E000425BD9 /* IosCourseGuideTests.swift */; };
 		52B87EA82A5997E000425BD9 /* IosCourseGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87EA72A5997E000425BD9 /* IosCourseGuideUITests.swift */; };
 		52B87EAA2A5997E000425BD9 /* IosCourseGuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87EA92A5997E000425BD9 /* IosCourseGuideUITestsLaunchTests.swift */; };
-		52B87ECB2A59EBAF00425BD9 /* background_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B87ECA2A59EBAE00425BD9 /* background_splash.png */; };
 		52B87ECF2A5A313600425BD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B87ECE2A5A313600425BD9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +43,9 @@
 
 /* Begin PBXFileReference section */
 		52AB9CB72A5B181100868248 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		52AB9CB92A5B2CAD00868248 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		52AB9CBC2A5B478600868248 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		52AB9CC22A5B4BB000868248 /* background_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_splash.png; sourceTree = "<group>"; };
 		52B87E802A5997DD00425BD9 /* IosCourseGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosCourseGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B87E832A5997DD00425BD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B87E852A5997DD00425BD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		52B87EA32A5997E000425BD9 /* IosCourseGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosCourseGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B87EA72A5997E000425BD9 /* IosCourseGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosCourseGuideUITests.swift; sourceTree = "<group>"; };
 		52B87EA92A5997E000425BD9 /* IosCourseGuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosCourseGuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		52B87ECA2A59EBAE00425BD9 /* background_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_splash.png; path = ../../../background_splash.png; sourceTree = "<group>"; };
 		52B87ECE2A5A313600425BD9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52AB9CBB2A5B473A00868248 /* home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		52B87E772A5997DD00425BD9 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +124,7 @@
 				52B87E832A5997DD00425BD9 /* AppDelegate.swift */,
 				52B87E852A5997DD00425BD9 /* SceneDelegate.swift */,
 				52B87E8F2A5997DF00425BD9 /* Assets.xcassets */,
-				52B87ECA2A59EBAE00425BD9 /* background_splash.png */,
+				52AB9CC22A5B4BB000868248 /* background_splash.png */,
 				52B87E912A5997DF00425BD9 /* LaunchScreen.storyboard */,
 				52B87E942A5997DF00425BD9 /* Info.plist */,
 				52B87E8C2A5997DD00425BD9 /* IosCourseGuide.xcdatamodeld */,
@@ -158,6 +167,7 @@
 		52B87EC62A59EA2A00425BD9 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				52AB9CBB2A5B473A00868248 /* home */,
 				52B87EC92A59EA6700425BD9 /* register */,
 				52B87EC82A59EA6000425BD9 /* login */,
 				52B87EC72A59EA5900425BD9 /* splash */,
@@ -170,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				52B87E872A5997DD00425BD9 /* SplashViewController.swift */,
-				52AB9CB92A5B2CAD00868248 /* LoginPresenter.swift */,
+				52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */,
 			);
 			path = splash;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 		52B87EC92A59EA6700425BD9 /* register */ = {
 			isa = PBXGroup;
 			children = (
+				52AB9CBC2A5B478600868248 /* RegisterViewController.swift */,
 			);
 			path = register;
 			sourceTree = "<group>";
@@ -296,7 +307,7 @@
 			files = (
 				52B87E932A5997DF00425BD9 /* LaunchScreen.storyboard in Resources */,
 				52B87E902A5997DF00425BD9 /* Assets.xcassets in Resources */,
-				52B87ECB2A59EBAF00425BD9 /* background_splash.png in Resources */,
+				52AB9CC32A5B4BB000868248 /* background_splash.png in Resources */,
 				52B87E8B2A5997DD00425BD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +335,8 @@
 			files = (
 				52B87E882A5997DD00425BD9 /* SplashViewController.swift in Sources */,
 				52AB9CB82A5B181100868248 /* Util.swift in Sources */,
-				52AB9CBA2A5B2CAD00868248 /* LoginPresenter.swift in Sources */,
+				52AB9CBA2A5B2CAD00868248 /* SplashPresenter.swift in Sources */,
+				52AB9CBD2A5B478600868248 /* RegisterViewController.swift in Sources */,
 				52B87E8E2A5997DD00425BD9 /* IosCourseGuide.xcdatamodeld in Sources */,
 				52B87E842A5997DD00425BD9 /* AppDelegate.swift in Sources */,
 				52B87ECF2A5A313600425BD9 /* LoginViewController.swift in Sources */,

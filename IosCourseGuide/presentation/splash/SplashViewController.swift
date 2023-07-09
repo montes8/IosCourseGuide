@@ -10,7 +10,7 @@ import UIKit
 class SplashViewController: UIViewController,ILoginPresenter {
     
        
-    var presenter = LoginPresenter()
+    var presenter = SplashPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
