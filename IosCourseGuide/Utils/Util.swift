@@ -10,20 +10,22 @@ import Foundation
 
 extension UIViewController {
 
-    func showErrorMessage(_ message: String,completionHandler:@escaping (Bool) -> Void) {
+    func showErrorMessage(_ message: String,_ flag: Bool = true,completionHandler:@escaping (Bool) -> Void) {
         let alert = UIAlertController(title: "Alerta", message: message, preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
-            if action.style == .cancel{
+        if(flag){
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+                    completionHandler(false)
+                
+            }))
+        }
+      
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { action in
                 completionHandler(true)
-            }
             
         }))
     
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in
-                completionHandler(false)
-            
-        }))
+       
         
         self.present(alert, animated: true)
     }

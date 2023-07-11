@@ -8,7 +8,7 @@
 import Foundation
 
 class SplashPresenter{
-    var delegado : ILoginPresenter?
+    var delegado : ISplashPresenter?
     
     func getToken() {
         delegado?.successToken(token: UserDefaults.standard.bool(forKey: "KeyToken"))
@@ -16,6 +16,6 @@ class SplashPresenter{
 }
 
 
-protocol ILoginPresenter {
+protocol ISplashPresenter {
     func successToken(token: Bool)
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController,ILoginPresenter {
+class SplashViewController: UIViewController,ISplashPresenter {
     
        
     var presenter = SplashPresenter()
@@ -33,12 +33,11 @@ class SplashViewController: UIViewController,ILoginPresenter {
     }
     
     func successToken(token: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.performSegue(withIdentifier: "nextLogin", sender:self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             if(token){
                 
             }else{
-               
+                self.performSegue(withIdentifier: "nextLogin", sender:self)
             }
           
         }
