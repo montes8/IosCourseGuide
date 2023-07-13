@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class SplashPresenter{
     var delegado : ISplashPresenter?
@@ -18,4 +19,27 @@ class SplashPresenter{
 
 protocol ISplashPresenter {
     func successToken(token: Bool)
+}
+
+
+
+class  SplashViewModel{
+    
+    var successToken = PublishSubject<Bool>()
+    
+    func getToken() -> Observable<Bool>{
+        return Observable.create{observer -> Disposable in
+            var token = UserDefaults.standard.bool(forKey: "KeyToken")
+            observer.onNext(token)
+            return Disposables.create {}
+        }
+        
+    }
+    
+    func getTokenTwo(){
+        successToken.onNext(UserDefaults.standard.bool(forKey: "KeyToken"))
+        successToken.onCompleted()
+        
+    }
+    
 }
