@@ -10,14 +10,12 @@ import MaterialComponents
 import CoreData
 
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-    
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter{
+   
     @IBOutlet weak var editUser: UITextField!
-    
     @IBOutlet weak var editPass: UITextField!
+    
+    var presenter = LoginPresenter()
     
     var result = [UserEntity]()
     override func viewDidLoad() {
@@ -27,50 +25,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         editUser.heightAnchor.constraint(equalToConstant: 56).isActive = true
         editPass.heightAnchor.constraint(equalToConstant: 56).isActive = true
         editPass.isSecureTextEntry = true
-        
-        let fetchRequest : NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
-        
-      
-        do {
-            //result = try context.fetch(fetchRequest)
-          
-            
-            //fetchRequest.predicate =  NSPredicate(format: "name CONTAINS 'Tayler'")
-            fetchRequest.predicate = NSCompoundPredicate(type:.and, subpredicates:[
-                NSPredicate(format: "name == %@", "Tayler"),
-                NSPredicate(format: "password == %@", "tayler")])
-            result = try context.fetch(fetchRequest)
-            for data in result as [NSManagedObject]{
-            var name = data.value(forKey: "name")
-                var pass = data.value(forKey: "password")
-                print(name)
-                print(pass)
-           }
-           
-           
-        }catch {
-            print(error.localizedDescription)
-        }
+        presenter.delegado = self
        
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.editUser.resignFirstResponder()
-        self.editPass.resignFirstResponder()
-        return false
-       
+    func successLogin() {
+        self.showErrorMessage("usuario logeado"){_ in}
     }
+    
+    func errorLogin(_ value: String) {
+        self.showErrorMessage(value){_ in}
+    }
+    
     
     @IBAction func onClickRegister(_ sender: UIButton) {
         self.performSegue(withIdentifier: "nextRegister", sender:self)
     }
     
     @IBAction func onClickLogin(_ sender: UIButton) {
-        if self.editUser.text == "gabbi" && self.editPass.text == "gabbi"{
-            
-        }else{
-            self.showErrorMessage("Usuario incorrecto"){_ in}
-        }
+        presenter.loadLogin(editUser.text ?? "",editPass.text ?? "")
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.editUser.resignFirstResponder()
+        self.editPass.resignFirstResponder()
+        return false
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
