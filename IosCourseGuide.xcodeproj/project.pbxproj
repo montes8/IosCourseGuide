@@ -12,6 +12,11 @@
 		523B839B2A5CC68E00469460 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B839A2A5CC68E00469460 /* RegisterPresenter.swift */; };
 		523B839D2A5CCB3400469460 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B839C2A5CCB3400469460 /* LoginPresenter.swift */; };
 		523B839F2A5CD26B00469460 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B839E2A5CD26B00469460 /* RegisterViewController.swift */; };
+		52412EE12A6077EA0023FC10 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412EE02A6077EA0023FC10 /* HomeViewController.swift */; };
+		52412EE32A6078D50023FC10 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412EE22A6078D50023FC10 /* HomePresenter.swift */; };
+		52412EE62A607FC40023FC10 /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412EE52A607FC40023FC10 /* RecipesModel.swift */; };
+		52412EF32A60A96F0023FC10 /* RowHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412EF12A60A96F0023FC10 /* RowHomeViewCell.swift */; };
+		52412EF42A60A96F0023FC10 /* RowHomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52412EF22A60A96F0023FC10 /* RowHomeViewCell.xib */; };
 		52AB9CB82A5B181100868248 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB72A5B181100868248 /* Util.swift */; };
 		52AB9CBA2A5B2CAD00868248 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */; };
 		52AB9CC32A5B4BB000868248 /* background_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AB9CC22A5B4BB000868248 /* background_splash.png */; };
@@ -53,6 +58,11 @@
 		523B839A2A5CC68E00469460 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		523B839C2A5CCB3400469460 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		523B839E2A5CD26B00469460 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		52412EE02A6077EA0023FC10 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52412EE22A6078D50023FC10 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		52412EE52A607FC40023FC10 /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
+		52412EF12A60A96F0023FC10 /* RowHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowHomeViewCell.swift; sourceTree = "<group>"; };
+		52412EF22A60A96F0023FC10 /* RowHomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowHomeViewCell.xib; sourceTree = "<group>"; };
 		52AB9CB72A5B181100868248 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		52AB9CC22A5B4BB000868248 /* background_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_splash.png; sourceTree = "<group>"; };
@@ -119,9 +129,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		52412EE42A607FB40023FC10 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				52412EE52A607FC40023FC10 /* RecipesModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		52412EF52A60ABF80023FC10 /* row */ = {
+			isa = PBXGroup;
+			children = (
+				52412EF22A60A96F0023FC10 /* RowHomeViewCell.xib */,
+				52412EF12A60A96F0023FC10 /* RowHomeViewCell.swift */,
+			);
+			path = row;
+			sourceTree = "<group>";
+		};
 		52AB9CBB2A5B473A00868248 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				52412EF52A60ABF80023FC10 /* row */,
+				52412EE02A6077EA0023FC10 /* HomeViewController.swift */,
+				52412EE22A6078D50023FC10 /* HomePresenter.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -151,6 +181,7 @@
 		52B87E822A5997DD00425BD9 /* IosCourseGuide */ = {
 			isa = PBXGroup;
 			children = (
+				52412EE42A607FB40023FC10 /* model */,
 				52B87EC42A59E9FC00425BD9 /* data */,
 				52B87EC62A59EA2A00425BD9 /* presentation */,
 				52B87EC22A59E9CC00425BD9 /* Utils */,
@@ -359,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52412EF42A60A96F0023FC10 /* RowHomeViewCell.xib in Resources */,
 				52B87E932A5997DF00425BD9 /* LaunchScreen.storyboard in Resources */,
 				52B87E902A5997DF00425BD9 /* Assets.xcassets in Resources */,
 				52AB9CC32A5B4BB000868248 /* background_splash.png in Resources */,
@@ -494,13 +526,17 @@
 				52B87E882A5997DD00425BD9 /* SplashViewController.swift in Sources */,
 				523B839F2A5CD26B00469460 /* RegisterViewController.swift in Sources */,
 				52AB9CB82A5B181100868248 /* Util.swift in Sources */,
+				52412EE32A6078D50023FC10 /* HomePresenter.swift in Sources */,
 				52AB9CBA2A5B2CAD00868248 /* SplashPresenter.swift in Sources */,
 				523B839D2A5CCB3400469460 /* LoginPresenter.swift in Sources */,
 				523B839B2A5CC68E00469460 /* RegisterPresenter.swift in Sources */,
 				52B87E8E2A5997DD00425BD9 /* IosCourseGuide.xcdatamodeld in Sources */,
+				52412EE12A6077EA0023FC10 /* HomeViewController.swift in Sources */,
 				52B87E842A5997DD00425BD9 /* AppDelegate.swift in Sources */,
+				52412EF32A60A96F0023FC10 /* RowHomeViewCell.swift in Sources */,
 				52B87ECF2A5A313600425BD9 /* LoginViewController.swift in Sources */,
 				52B87E862A5997DD00425BD9 /* SceneDelegate.swift in Sources */,
+				52412EE62A607FC40023FC10 /* RecipesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

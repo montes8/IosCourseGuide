@@ -36,8 +36,9 @@ class LoginPresenter{
                }
                 
                if result.isEmpty{
-                    delegado?.errorLogin("El usuario ni esta registrado")
+                    delegado?.errorLogin("El usuario n0 esta registrado")
                 }else{
+                    UserDefaults.standard.set(true, forKey: "KeyToken")
                     delegado?.successLogin()
                 }
                
@@ -47,7 +48,6 @@ class LoginPresenter{
             }
         }
       
-        
        
     }
 }

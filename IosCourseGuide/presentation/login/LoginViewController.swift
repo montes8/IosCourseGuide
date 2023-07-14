@@ -30,7 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter
     }
     
     func successLogin() {
-        self.showErrorMessage("usuario logeado"){_ in}
+        self.performSegue(withIdentifier: "nextHome", sender:self)
         
     }
     
@@ -53,12 +53,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter
         self.editPass.resignFirstResponder()
         return false
        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "nextRegister" {
-            let objDestino = segue.destination as!RegisterViewController
-        }
     }
 
 }
