@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate,IRegisterPres
     }
     
     func successRegister(_ value: String) {
-        showErrorMessage(value,false){_ in
+        self.showErrorMessage(value){_ in
             print("successRegister")
             self.navigationController?.popViewController(animated: true)
         }

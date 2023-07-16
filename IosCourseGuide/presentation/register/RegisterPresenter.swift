@@ -23,7 +23,7 @@ class RegisterPresenter{
             
             let success = DataBaseCourse.saveUserEntity(context: context, user: user, pass: pass)
             if success {
-                delegado?.errorRegister("Usuario Registrado")
+                delegado?.successRegister("Usuario Registrado")
             }else{
                 delegado?.errorRegister("No se pudo guardar el usuario")
             }
