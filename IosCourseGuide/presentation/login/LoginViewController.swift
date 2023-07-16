@@ -2,37 +2,34 @@
 //  LoginViewController.swift
 //  IosCourseGuide
 //
-//  Created by MacBook Pro on 8/07/23.
+//  Created by MacBook Pro on 16/07/23.
 //
 
 import UIKit
-import MaterialComponents
-import CoreData
 
+class LoginViewController: UIViewController,ILoginPresenter {
+  
 
-class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter{
-   
+    @IBOutlet weak var userEdit: UITextField!
+    @IBOutlet weak var passEdit: UITextField!
     
-   
-    @IBOutlet weak var editUser: UITextField!
-    @IBOutlet weak var editPass: UITextField!
+    @IBOutlet weak var textTitle: UILabel!
     
     var presenter = LoginPresenter()
     
-    var result = [UserEntity]()
+    var titleLogin = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.editUser.delegate = self
-        self.editPass.delegate = self
-        editUser.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        editPass.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        editPass.isSecureTextEntry = true
+        userEdit.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        passEdit.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        passEdit.isSecureTextEntry = true
         presenter.delegado = self
-       
+        textTitle.text = titleLogin
     }
     
     func successLogin(user: UserModel?) {
-        self.performSegue(withIdentifier: "nextHome", sender:self)
+        
     }
     
     func errorLogin(_ value: String) {
@@ -40,21 +37,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter
     }
     
     
-    @IBAction func onClickRegister(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "nextRegister", sender:self)
+    @IBAction func onClickNextRegister(_ sender: Any) {
+        
+   
     }
     
-    @IBAction func onClickLogin(_ sender: UIButton) {
-        presenter.loadLogin(editUser.text ?? "",editPass.text ?? "")
+    @IBAction func onClickLogin(_ sender: Any) {
+        presenter.loadLogin(userEdit.text ?? "",passEdit.text ?? "")
     }
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.editUser.resignFirstResponder()
-        self.editPass.resignFirstResponder()
-        return false
-       
-    }
-
 }
 
+
+class LoginNavigation {
+    
+//    para poder Navegar
+    static func newInstance(usingNavigationFactory factory : NavigationFactory) -> UINavigationController{
+        let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
+        let view = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        view.titleLogin = "Hola Gabbi"
+        return factory(view)
+    }
+    
+}
