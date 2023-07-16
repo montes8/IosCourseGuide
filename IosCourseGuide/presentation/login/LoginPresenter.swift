@@ -21,7 +21,7 @@ class LoginPresenter{
                       if error != nil{
                           self.delegado?.errorLogin(error ?? "")
                       }else{
-                          self.delegado?.successLogin(user: UserModel.loadUser(entity: data) ?? nil)
+                          self.delegado?.successLogin(user: UserModel.loadUser(entity: data ?? []) ?? nil)
                     }
                 }
             }

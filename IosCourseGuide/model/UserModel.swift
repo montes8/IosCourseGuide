@@ -15,7 +15,7 @@ struct UserModel : Codable {
     var pass : String = ""
     
     
-    static func loadUser(entity : [NSManagedObject]?) -> UserModel?{
+    static func loadUser(entity : [NSManagedObject]) -> UserModel?{
         var user : [UserModel] = []
         for data in entity as [NSManagedObject]{
             user.append(UserModel(id: data.value(forKey: "id") as! Int,
