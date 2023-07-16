@@ -52,4 +52,16 @@ class SplashViewController: UIViewController,ISplashPresenter
 }
 
 
+class SplashAssembly {
+    
+//    para poder Navegar
+    static func build() -> UIViewController{
+        let storyboard = UIStoryboard(name: "Splash", bundle: Bundle.main)
+        let view = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
+      
+        return view
+    }
+}
+
+
 

@@ -23,7 +23,6 @@ class HomeViewController: UIViewController,IHomePresenter, UITableViewDelegate, 
         tabHome.dataSource = self
         tabHome.separatorStyle = .none
         tabHome.showsVerticalScrollIndicator = false
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView,heightForRowAt indexPath : IndexPath) -> CGFloat {return 200}
@@ -53,5 +52,5 @@ class HomeViewController: UIViewController,IHomePresenter, UITableViewDelegate, 
         showErrorMessage(message){_ in }
     }
     
-    
 }
+

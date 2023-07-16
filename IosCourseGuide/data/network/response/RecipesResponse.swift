@@ -25,7 +25,7 @@ struct RecipesResponse : Codable{
         var list :[RecipesModel] = []
         for data in response {
             list.append(RecipesModel(id: data.id,title: data.title,description: data.description
-                                     ,preparation: data.urlImg,urlImg: data.institute,institute: data.addressInstitute,
+                                     ,preparation: data.preparation,urlImg: data.urlImg,institute: data.institute,
                                      addressInstitute: data.latitude,latitude: data.longitude))
         }
         return list

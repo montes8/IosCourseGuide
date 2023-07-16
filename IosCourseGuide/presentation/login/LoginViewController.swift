@@ -12,6 +12,8 @@ import CoreData
 
 class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter{
    
+    
+   
     @IBOutlet weak var editUser: UITextField!
     @IBOutlet weak var editPass: UITextField!
     
@@ -29,9 +31,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate,ILoginPresenter
        
     }
     
-    func successLogin() {
+    func successLogin(user: UserModel?) {
         self.performSegue(withIdentifier: "nextHome", sender:self)
-        
     }
     
     func errorLogin(_ value: String) {
