@@ -21,7 +21,7 @@ class LoginPresenter{
                       if error != nil{
                           self.delegado?.errorLogin(error ?? "")
                       }else{
-                          self.delegado?.successLogin()
+                          self.delegado?.successLogin(user: UserModel.loadUser(entity: data) ?? nil)
                     }
                 }
             }
@@ -31,6 +31,6 @@ class LoginPresenter{
 
 
 protocol ILoginPresenter {
-    func successLogin()
+    func successLogin(user : UserModel?)
     func errorLogin(_ value: String)
 }

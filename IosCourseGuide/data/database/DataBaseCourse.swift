@@ -33,4 +33,18 @@ class DataBaseCourse {
             }
        }
     
+    static func saveUserEntity(context : NSManagedObjectContext,user : String , pass : String )-> Bool {
+        let userEntity = UserEntity(context: context)
+        userEntity.id = Int16.random(in: 10...20)
+        userEntity.name = user
+        userEntity.password = pass
+        do {
+            try context.save()
+            return true
+        }
+        catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
 }

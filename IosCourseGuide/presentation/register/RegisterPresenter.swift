@@ -20,17 +20,12 @@ class RegisterPresenter{
             delegado?.errorRegister("Debes ingresar los datos completos")
             
         }else{
-            let userEntity = UserEntity(context: self.context)
-            userEntity.id = Int16.random(in: 10...20)
-            userEntity.name = user
-            userEntity.password = pass
-            do {
-                try context.save()
-                delegado?.successRegister("Usuario registrado")
-            }
-            catch {
-                print(error.localizedDescription)
-                delegado?.errorRegister("Error al registarse")
+            
+            let success = DataBaseCourse.saveUserEntity(context: context, user: user, pass: pass)
+            if success {
+                delegado?.errorRegister("Usuario Registrado")
+            }else{
+                delegado?.errorRegister("No se pudo guardar el usuario")
             }
         }
         
