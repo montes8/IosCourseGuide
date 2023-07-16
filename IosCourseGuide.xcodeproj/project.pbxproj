@@ -17,6 +17,8 @@
 		52412EE62A607FC40023FC10 /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412EE52A607FC40023FC10 /* RecipesModel.swift */; };
 		52412EF32A60A96F0023FC10 /* RowHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412EF12A60A96F0023FC10 /* RowHomeViewCell.swift */; };
 		52412EF42A60A96F0023FC10 /* RowHomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52412EF22A60A96F0023FC10 /* RowHomeViewCell.xib */; };
+		527B0C9C2A63792800C58619 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B0C9B2A63792800C58619 /* Repository.swift */; };
+		527B0C9E2A6379F400C58619 /* DataBaseCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B0C9D2A6379F400C58619 /* DataBaseCourse.swift */; };
 		52AB9CB82A5B181100868248 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB72A5B181100868248 /* Util.swift */; };
 		52AB9CBA2A5B2CAD00868248 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */; };
 		52AB9CC32A5B4BB000868248 /* background_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 52AB9CC22A5B4BB000868248 /* background_splash.png */; };
@@ -63,6 +65,8 @@
 		52412EE52A607FC40023FC10 /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
 		52412EF12A60A96F0023FC10 /* RowHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowHomeViewCell.swift; sourceTree = "<group>"; };
 		52412EF22A60A96F0023FC10 /* RowHomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowHomeViewCell.xib; sourceTree = "<group>"; };
+		527B0C9B2A63792800C58619 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		527B0C9D2A6379F400C58619 /* DataBaseCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseCourse.swift; sourceTree = "<group>"; };
 		52AB9CB72A5B181100868248 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		52AB9CB92A5B2CAD00868248 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		52AB9CC22A5B4BB000868248 /* background_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_splash.png; sourceTree = "<group>"; };
@@ -146,6 +150,22 @@
 			path = row;
 			sourceTree = "<group>";
 		};
+		527B0C992A6378F800C58619 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				527B0C9B2A63792800C58619 /* Repository.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		527B0C9A2A63790A00C58619 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				527B0C9D2A6379F400C58619 /* DataBaseCourse.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
 		52AB9CBB2A5B473A00868248 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +245,8 @@
 		52B87EC42A59E9FC00425BD9 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				527B0C9A2A63790A00C58619 /* database */,
+				527B0C992A6378F800C58619 /* network */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -525,8 +547,10 @@
 			files = (
 				52B87E882A5997DD00425BD9 /* SplashViewController.swift in Sources */,
 				523B839F2A5CD26B00469460 /* RegisterViewController.swift in Sources */,
+				527B0C9C2A63792800C58619 /* Repository.swift in Sources */,
 				52AB9CB82A5B181100868248 /* Util.swift in Sources */,
 				52412EE32A6078D50023FC10 /* HomePresenter.swift in Sources */,
+				527B0C9E2A6379F400C58619 /* DataBaseCourse.swift in Sources */,
 				52AB9CBA2A5B2CAD00868248 /* SplashPresenter.swift in Sources */,
 				523B839D2A5CCB3400469460 /* LoginPresenter.swift in Sources */,
 				523B839B2A5CC68E00469460 /* RegisterPresenter.swift in Sources */,

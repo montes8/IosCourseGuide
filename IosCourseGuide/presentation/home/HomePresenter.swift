@@ -14,7 +14,18 @@ class HomePresenter{
     func getList() {
         let urlService = "https://8236-2800-200-e3c0-1123-ec7d-fca6-2a9c-85d1.ngrok-free.app/api/user/loadRecipes"
         
-        AF.request(urlService, method: .get, parameters: nil, encoding:
+        Repository.requestService(urlService,method: .get,params: nil,
+                                  header: nil,interceptor: nil,type: [RecipesModel].self){ data, error in
+            
+            if error != nil {
+                self.delegado?.errorService(message: error ?? "Error al obtener datos")
+            }else{
+                self.delegado?.loadList(list: data ?? [])
+            }
+            
+        }
+        
+        /*AF.request(urlService, method: .get, parameters: nil, encoding:
                     URLEncoding.default, headers: nil, interceptor: nil).response{ response in
             
             switch response.result {
@@ -34,7 +45,7 @@ class HomePresenter{
                 self.delegado?.errorService(message: "Error al obtener datos")
             }
             
-        }
+        }*/
         
     }
     
