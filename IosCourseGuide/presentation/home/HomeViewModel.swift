@@ -21,9 +21,11 @@ class  HomeViewModel{
             if data != nil{
                 self.successList.onNext(data ?? [])
                 self.successList.onCompleted()
+                print("data servicio", data ?? [])
             }else{
                 self.errorList.onNext(error ?? "")
                 self.errorList.onCompleted()
+                print("data servicio", error ?? "")
             }
         }
     }

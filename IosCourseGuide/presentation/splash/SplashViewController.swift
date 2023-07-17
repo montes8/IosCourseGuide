@@ -29,7 +29,7 @@ class SplashViewController: UIViewController{
                     self.initialViewController = HomeNavigation.newInstance(usingNavigationFactory: NavigationCustom.build)
                 }else{
                    
-                    self.initialViewController = LoginNavigation.newInstance(usingNavigationFactory: NavigationCustomToolbar.build)
+                    self.initialViewController = HomeNavigation.newInstance(usingNavigationFactory: NavigationCustomToolbar.build)
                    
                 }
                 self.normalSetRoot(window: self.view.window, initialViewController: self.initialViewController)

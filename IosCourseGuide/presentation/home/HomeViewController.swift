@@ -23,6 +23,7 @@ class HomeViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         tabHome.dataSource = self
         tabHome.separatorStyle = .none
         tabHome.showsVerticalScrollIndicator = false
+        configObserver()
         viewModel.getlistHome()
     }
     

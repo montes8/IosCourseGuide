@@ -20,14 +20,14 @@ class Repository{
 
        let urlService = "https://8236-2800-200-e3c0-1123-ec7d-fca6-2a9c-85d1.ngrok-free.app/api/user/loadRecipes"
        
-       AF.request(urlString, method: method, parameters: params, encoding:
+       AF.request(urlService, method: method, parameters: params, encoding:
                    URLEncoding.default, headers: header, interceptor: interceptor).response{ response in
            
            switch response.result {
            case .success(let data):
                do{
                    let responseService = try JSONDecoder().decode(type.self, from: data ?? Data())
-                   print("data servicio", responseService)
+                  
                     completion(responseService, nil)
         
                }catch{
