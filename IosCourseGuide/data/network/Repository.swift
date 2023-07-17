@@ -28,9 +28,8 @@ class Repository{
                do{
                    let responseService = try JSONDecoder().decode(type.self, from: data ?? Data())
                    print("data servicio", responseService)
-                   DispatchQueue.main.asyncAfter(deadline: .now()) {
-                       completion(responseService, nil)
-                   }
+                    completion(responseService, nil)
+        
                }catch{
                    completion(nil, "Error al decodificar")
                }

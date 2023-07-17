@@ -8,9 +8,8 @@
 import UIKit
 import RxSwift
 
-class SplashViewController: UIViewController,ISplashPresenter{
+class SplashViewController: UIViewController{
 
-  //  var presenter = SplashPresenter()
     var initialViewController : UIViewController?
     private var viewModel = SplashViewModel()
     let diposeBag = DisposeBag()
@@ -19,11 +18,9 @@ class SplashViewController: UIViewController,ISplashPresenter{
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background_splash.png")!)
         
-        
-          viewModel.getToken().subscribe(onNext: {token in self.successToken(token: token)}
-            ).disposed(by:diposeBag)
-       // viewModel.successToken.subscribe(onNext: {token inself.successToken(token: token)}).disposed(by:diposeBag)
-       // viewModel.getTokenTwo()
+        viewModel.successToken.subscribe(onNext: {token in
+            self.successToken(token: token)}).disposed(by:diposeBag)
+        viewModel.getTokenTwo()
     }
    
     func successToken(token: Bool) {
