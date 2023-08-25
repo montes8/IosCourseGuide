@@ -1,0 +1,6 @@
+framework module Pods_IosCourseGuideTests {
+  umbrella header "Pods-IosCourseGuideTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
