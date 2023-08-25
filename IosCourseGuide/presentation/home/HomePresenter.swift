@@ -11,7 +11,7 @@ class HomePresenter{
     var delegado : IHomePresenter?
     
     func getList() {
-        let urlService = "https://8236-2800-200-e3c0-1123-ec7d-fca6-2a9c-85d1.ngrok-free.app/api/user/loadRecipes"
+        let urlService = "https://d9a5-2800-200-e3c0-1123-484c-49cf-9d59-6617.ngrok-free.app/service/user/loadRecipes"
         
         if let url = URL(string: urlService){
             let session = URLSession(configuration: .default)
